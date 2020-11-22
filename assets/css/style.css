@@ -276,7 +276,11 @@ h6 {
     url(../img/hero-bg.jpg) center center no-repeat;
   background-size: cover;
 }
-
+section#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
 #hero .container,
 #hero .container-fluid {
   padding-top: 84px;
