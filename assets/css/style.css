@@ -44,14 +44,14 @@ h6 {
   font-size: 24px;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  background: #5846f9;
+  border-radius: 5px;
+  background: #2196f3;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #7b27d8;
+  background: #1976d2;
   color: #fff;
 }
 
