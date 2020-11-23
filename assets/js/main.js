@@ -5,7 +5,7 @@
   $(window).on("load", function () {
     if ($("#preloader").length) {
       $("#preloader")
-        .delay(100)
+        .delay(0)
         .fadeOut("slow", function () {
           $(this).remove();
         });
@@ -278,7 +278,7 @@ var mySwiper = new Swiper(".swiper-container", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  autoplay: { delay: 500 },
+  autoplay: { delay: 400 },
   speed: 5000,
 
   // If we need pagination
@@ -297,4 +297,3 @@ var mySwiper = new Swiper(".swiper-container", {
     el: ".swiper-scrollbar",
   },
 });
-
