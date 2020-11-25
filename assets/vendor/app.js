@@ -60,7 +60,7 @@ particlesJS(
         },
       },
       size: {
-        value: 7,
+        value: 5,
         random: false,
         anim: {
           enable: false,
@@ -94,7 +94,7 @@ particlesJS(
       detect_on: "canvas",
       events: {
         onhover: {
-          enable: false,
+          enable:true,
           mode: "repulse",
         },
         onclick: {

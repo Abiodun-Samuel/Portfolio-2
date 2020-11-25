@@ -272,7 +272,7 @@ h6 {
   background: -webkit-linear-gradient(
       81deg,
       rgba(25, 118, 210, 0.89) 50%,
-      rgba(255, 255, 255, 0.2) 50%
+      rgba(247, 5, 5, 0.2) 50%
     ),
     url(../img/hero-bg.jpg) center center no-repeat;
   background-size: cover;
