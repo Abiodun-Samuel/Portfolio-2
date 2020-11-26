@@ -279,7 +279,7 @@ var mySwiper = new Swiper(".swiper-container", {
   direction: "horizontal",
   loop: true,
   autoplay: { delay: 400 },
-  speed: 5000,
+  speed: 1000,
 
   // If we need pagination
   pagination: {
