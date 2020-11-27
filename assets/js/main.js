@@ -2,15 +2,15 @@
   "use strict";
 
   // Preloader
-  // $(window).on("load", function () {
-  //   if ($("#preloader").length) {
-  //     $("#preloader")
-  //       .delay(50)
-  //       .fadeOut("slow", function () {
-  //         $(this).remove();
-  //       });
-  //   }
-  // });
+  $(window).on("load", function () {
+    if ($("#preloader").length) {
+      $("#preloader")
+        // .delay(100)
+        .fadeOut(100, function () {
+          $(this).remove();
+        });
+    }
+  });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $("#header").outerHeight() - 16;
@@ -280,29 +280,11 @@ var mySwiper = new Swiper(".swiper-container", {
   loop: true,
   autoplay: { delay: 400 },
   speed: 1000,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
 });
-var rule = CSSRulePlugin.getRule("span:before");
 gsap.from(".one", {
   opacity: 0,
-  duration: 1,
+  duration: 1.2,
   y: -50,
-  ease: "Power2.easeInOut",
-  stagger: 0.5,
+  // ease: "Power2.easeInOut",
+  stagger: 0.6,
 });
-gsap.to(rule, { cssRule: { scaleY: 0 }, duration: 1 });

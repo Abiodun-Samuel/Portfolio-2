@@ -58,30 +58,28 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-/* #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
+#preloader {
   position: fixed;
   top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #2196f3;
-  border-top-color: #f5f5f5;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  left: calc(50% - 30px); 
+  z-index: 9999;
+  overflow: hidden;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
+  /* background: #fff; */
 }
+
+/* #preloader:before {
+  content: "";
+  position: fixed;
+  */
+  /* border: 6px solid #2196f3;
+  border-top-color: #f5f5f5; */
+  /* border-radius: 50%; */
+  /* width: 60px;
+  height: 60px; */
+  
+/* } */
 
 @-webkit-keyframes animate-preloader {
   0% {
@@ -99,7 +97,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-} */
+}
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -280,21 +278,6 @@ section#particles-js {
 #hero .container-fluid {
   padding-top: 84px;
 }
-.content h1 span,
-.content h2 span {
-  display: block;
-}
-span:before{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: 1;
-  transform-origin: 100% 0;
-}
-
 #hero h1 {
   margin: 0;
   font-size: 52px;
