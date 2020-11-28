@@ -13,10 +13,10 @@
     <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
-    />
+    /> -->
 
     <!-- Library CSS Files -->
     <!-- <link
@@ -1375,6 +1375,20 @@
       <img src="assets/img/logo.png" alt="" />
     </div>
 
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("sw.js").then(swReg => {
+            console.log("Service worker is registered");
+          }).catch(error => {
+            console.log("there was an error", error);
+          });
+        });
+      }
+    </script>
+
     <!-- Vendor JS Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -1409,7 +1423,7 @@
       integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="assets/vendor/counterup/counterup.min.js"></script> -->
+    <!-- <script  src="assets/vendor/counterup/counterup.min.js"></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
       integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
