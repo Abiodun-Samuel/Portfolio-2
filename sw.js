@@ -1,28 +1,21 @@
-importScripts(
-  "https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js"
-);
-workbox.routing.registerRoute(
-  /\.(?:css|js)$/,
-  new workbox.strategies.StaleWhileRevalidate({
-    cacheName: "assets",
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 50,
-        maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Days
-      }),
-    ],
-  })
-);
+// On install - caching the application shell
+self.addEventListener("install", function (event) {
+  event.waitUntil(
+    caches.open("sw-cache").then(function (cache) {
+      // cache any static files that make up the application shell
+      let chatched = cache.add("index.html", "assets/css/style.css");
+      return chatched;
+    })
+  );
+});
 
-workbox.routing.registerRoute(
-  /\.(?:png|jpg|gif|svg)$/,
-  new workbox.strategies.CacheFirst({
-    cacheName: "assets",
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 50,
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-      }),
-    ],
-  })
-);
+// On network request
+self.addEventListener("fetch", function (event) {
+  event.respondWith(
+    // Try the cache
+    caches.match(event.request).then(function (response) {
+      //If response found return it, else fetch again
+      return response || fetch(event.request);
+    })
+  );
+});
